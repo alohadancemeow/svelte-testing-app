@@ -4,26 +4,26 @@
 	import github from '$lib/images/github.svg';
 </script>
 
-<header>
-	<div class="corner">
-		<a href="https://svelte.dev/docs/kit">
-			<img src={logo} alt="SvelteKit" />
+<header data-testid="header">
+	<div class="corner" data-testid="svelte-logo-corner">
+		<a href="https://svelte.dev/docs/kit" data-testid="svelte-docs-link">
+			<img src={logo} alt="SvelteKit" data-testid="svelte-logo" />
 		</a>
 	</div>
 
-	<nav>
+	<nav data-testid="navigation">
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg>
-		<ul>
-			<li aria-current={page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
+		<ul data-testid="nav-list">
+			<li aria-current={page.url.pathname === '/' ? 'page' : undefined} data-testid="nav-item-home">
+				<a href="/" data-testid="nav-link-home">Home</a>
 			</li>
-			<li aria-current={page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">About</a>
+			<li aria-current={page.url.pathname === '/about' ? 'page' : undefined} data-testid="nav-item-about">
+				<a href="/about" data-testid="nav-link-about">About</a>
 			</li>
-			<li aria-current={page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="/sverdle">Sverdle</a>
+			<li aria-current={page.url.pathname.startsWith('/sverdle') ? 'page' : undefined} data-testid="nav-item-sverdle">
+				<a href="/sverdle" data-testid="nav-link-sverdle">Sverdle</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -31,9 +31,9 @@
 		</svg>
 	</nav>
 
-	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
-			<img src={github} alt="GitHub" />
+	<div class="corner" data-testid="github-logo-corner">
+		<a href="https://github.com/sveltejs/kit" data-testid="github-link">
+			<img src={github} alt="GitHub" data-testid="github-logo" />
 		</a>
 	</div>
 </header>

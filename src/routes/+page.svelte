@@ -9,19 +9,19 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
+<section data-testid="main-section">
+	<h1 data-testid="main-heading">
+		<span class="welcome" data-testid="welcome-image">
+			<picture data-testid="welcome-picture">
 				<source srcset={welcome} type="image/webp" />
-				<img src={welcomeFallback} alt="Welcome" />
+				<img src={welcomeFallback} alt="Welcome" data-testid="welcome-img" />
 			</picture>
 		</span>
 
 		to your new<br />SvelteKit app
 	</h1>
 
-	<h2>
+	<h2 data-testid="subheading">
 		try editing <strong>src/routes/+page.svelte</strong>
 	</h2>
 
