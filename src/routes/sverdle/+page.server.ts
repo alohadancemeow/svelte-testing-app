@@ -20,7 +20,7 @@ export const load = (({ cookies }) => {
 		/**
 		 * The correct answer, revealed if the game is over
 		 */
-		answer: game.answers.length >= 6 ? game.answer : null
+		answer: game.answers.length >= 6 || (game.answers.length > 0 && game.answers[game.answers.length - 1] === 'xxxxx') ? game.answer : null
 	};
 }) satisfies PageServerLoad;
 

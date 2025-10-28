@@ -3,42 +3,42 @@
 	<meta name="description" content="How to play Sverdle" />
 </svelte:head>
 
-<div class="text-column">
-	<h1>How to play Sverdle</h1>
+<div class="text-column" data-testid="how-to-play-page">
+	<h1 data-testid="page-title">How to play Sverdle</h1>
 
-	<p>
-		Sverdle is a clone of <a href="https://www.nytimes.com/games/wordle/index.html">Wordle</a>, the
+	<p data-testid="intro-text">
+		Sverdle is a clone of <a href="https://www.nytimes.com/games/wordle/index.html" data-testid="wordle-link">Wordle</a>, the
 		word guessing game. To play, enter a five-letter English word. For example:
 	</p>
 
-	<div class="example">
-		<span class="close">r</span>
-		<span class="missing">i</span>
-		<span class="close">t</span>
-		<span class="missing">z</span>
-		<span class="exact">y</span>
+	<div class="example" data-testid="first-example">
+		<span class="close" data-testid="letter-close-r">r</span>
+		<span class="missing" data-testid="letter-missing-i">i</span>
+		<span class="close" data-testid="letter-close-t">t</span>
+		<span class="missing" data-testid="letter-missing-z">z</span>
+		<span class="exact" data-testid="letter-exact-y">y</span>
 	</div>
 
-	<p>
+	<p data-testid="explanation-text">
 		The <span class="exact">y</span> is in the right place. <span class="close">r</span> and
 		<span class="close">t</span>
 		are the right letters, but in the wrong place. The other letters are wrong, and can be discarded.
 		Let's make another guess:
 	</p>
 
-	<div class="example">
-		<span class="exact">p</span>
-		<span class="exact">a</span>
-		<span class="exact">r</span>
-		<span class="exact">t</span>
-		<span class="exact">y</span>
+	<div class="example" data-testid="second-example">
+		<span class="exact" data-testid="letter-exact-p">p</span>
+		<span class="exact" data-testid="letter-exact-a">a</span>
+		<span class="exact" data-testid="letter-exact-r">r</span>
+		<span class="exact" data-testid="letter-exact-t">t</span>
+		<span class="exact" data-testid="letter-exact-y2">y</span>
 	</div>
 
-	<p>This time we guessed right! You have <strong>six</strong> guesses to get the word.</p>
+	<p data-testid="success-text">This time we guessed right! You have <strong data-testid="guess-count">six</strong> guesses to get the word.</p>
 
-	<p>
+	<p data-testid="server-info">
 		Unlike the original Wordle, Sverdle runs on the server instead of in the browser, making it
-		impossible to cheat. It uses <code>&lt;form&gt;</code> and cookies to submit data, meaning you can
+		impossible to cheat. It uses <code data-testid="form-code">&lt;form&gt;</code> and cookies to submit data, meaning you can
 		even play with JavaScript disabled!
 	</p>
 </div>
